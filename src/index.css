@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+input {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.NO-DATA-FOUND {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+/* ============= Auth Page ===========  */
+
+.Auth-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Auth-wrapper {
+  width: 400px;
+}
+
+.Auth-wrapper .error {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 400px;
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Auth-wrapper .success {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 400px;
+  background-color: lightgreen;
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Auth-wrapper h1 {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #4a66e0;
+}
+
+.Auth-wrapper p {
+  margin-bottom: 15px;
+  color: gray;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  width: 100%;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818cf8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #ffffff;
+  width: fit-content;
+}
+
+.coolinput input[type="text"],
+.coolinput input[type="email"],
+.coolinput input[type="password"] {
+  padding: 15px 10px;
+  font-size: 0.75rem;
+  border: 2px solid #818cf8;
+  border-radius: 5px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.coolinput input[type="text"]:focus,
+.coolinput input[type="email"]:focus,
+.coolinput input[type="password"]:focus {
+  outline: none;
+  border-color: #4a66e0;
+}
+
+.Auth-button {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  color: white;
+  margin-top: 5px;
+  background-color: #667de6;
+  cursor: pointer;
+}
+
+.Auth-button:hover {
+  background-color: #3656e6e2;
+}
+
+.Auth-redirect-text {
+  text-align: center;
+  margin-top: 13px;
+}
+
+.Auth-redirect-text a {
+  text-decoration: none;
+}
+
+/* ============= Header ===========  */
+
+.Header-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  /* background-color: pink; */
+}
+
+.Header-left,
+.Header-middle,
+.Header-right {
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.Header-middle {
+  text-align: center;
+}
+
+.Header-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Header-container h2 {
+  font-weight: 500;
+}
+
+.Header-left,
+.Header-right {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+}
+
+/* ============= Filter ===========  */
+
+.Filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 20%;
+  height: calc(100vh - 60px);
+  padding: 50px 30px;
+}
+
+.Filter-top {
+  display: flex;
+  gap: 15px;
+}
+
+.Filter-top select {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.Filter-middle p,
+.Filter-bottom p {
+  margin-bottom: 10px;
+}
+
+/* ============= Home ===========  */
+
+.Home-container {
+  display: flex;
+  width: 100%;
+}
+
+/* ============= Product ===========  */
+
+.Product-container {
+  width: 75%;
+  height: calc(100vh - 60px);
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding-bottom: 40px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* For firefox */
+}
+
+.Product-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============= ProductItem ===========  */
+
+.ProductItem-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 6px 0px;
+  background-color: #fff;
+  /* background-color: #3656e6e2; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+  height: 380px;
+}
+
+.ProductItem-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ProductItem-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 8px; */
+  margin-bottom: 10px;
+}
+
+.ProductItem-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 10px;
+  /* margin: 10px 0; */
+}
+
+.ProductItem-name {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.ProductItem-price {
+  font-size: 0.7em;
+  color: #555;
+}
+
+/* ============= ProductDescription ===========  */
+
+.ProductDescription {
+  padding: 20px 20px;
+  /* border: 1px solid black; */
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+}
+
+.ProductDescription-wrapper {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 400px;
+  /* background-color: pink; */
+}
+
+.ProductDescription img {
+  height: 600px;
+  width: 450px;
+  object-fit: cover;
+}
+
+.ProductDescription-info h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ProductDescription-info p:nth-of-type(1) {
+  color: gray;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.ProductDescription-size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.ProductDescription-sizes h3 {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.ProductDescription-size-button {
+  padding: 10px 35px;
+  outline: none;
+  border: 1px solid rgba(128, 128, 128, 0.575);
+  background-color: white;
+  cursor: pointer;
+}
+
+.ProductDescription-ADDTOCART button {
+  width: 100%;
+  background-color: black;
+  padding: 14px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ProductDescription-ADDTOCART p {
+  font-size: 15px;
+  color: gray;
+}
+
+.ProductDescription-ADDTOCART-infoIMG {
+  display: flex;
+  margin-top: 9px;
+  gap: 10px;
+  align-items: center;
+  padding: 0 10px;
+  /* background: pink; */
+}
+
+.ProductDescription-ADDTOCART-infoIMG img {
+  width: 12px;
+  height: 12px;
+}
+
+.Main-description h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #e50010;
+}
+
+.Main-description p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.Product-container-category {
+  padding: 5px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category-link {
+  padding: 5px 30px;
+  font-weight: 300;
+  font-size: 12px;
+  color: gray;
+}
